@@ -9,6 +9,9 @@ html {
     font-size:1rem;
     background-color:#fefefe;
     color: #2b2b2b;
+    width:100%;
+    margin:0; 
+    
 }
 /*Typography*/
 .section-introduction{
@@ -53,12 +56,13 @@ h3{
     flex-direction:column; 
     justify-content: center;
     align-content: center;
-    padding: 0,5rem;
+    padding: 0.5rem;
     position: sticky;
     border-bottom: 0.5px solid #cccccc;
     background-color: #256358;
     position: sticky;
     top: 0;
+    width:100%;
 }
 .header a, .footer a{
     color: #fefefe;
@@ -92,7 +96,7 @@ justify-content:center;
 }
 .footer{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     background-color: #256358;
@@ -189,12 +193,14 @@ img{
     display:flex;
     flex-direction:column;
     width:80%;
+    max-width:1200px;
 }
 .box{
     padding: 2rem;
     border: 1px solid #f2f2f2;
     border-radius:8px;
-    margin: 24px;
+    margin: 1rem auto;
+    width:90%;
     max-width:320px;
     box-shadow: 0px 0px 1px rgba(56, 56, 57, 0.01),
     0px 1px 6px rgba(56, 56, 57, 0.02),
@@ -238,6 +244,10 @@ img{
         display:flex;
         flex-direction:row;
         justify-content:space-between;
+        top:0;
+    }
+    .footer{
+        flex-direction: row;
     }
     .hero-content{
         display:flex;
@@ -263,7 +273,7 @@ img{
         max-width: 80%;
         flex: 1; 
     }
-}
     .textimg-column:nth-child(even) {
         flex-direction: row-reverse;
     }
+}
