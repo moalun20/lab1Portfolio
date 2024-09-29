@@ -63,6 +63,7 @@ h3{
     position: sticky;
     top: 0;
     width:100%;
+    z-index:999;
 }
 .header a, .footer a{
     color: #fefefe;
@@ -185,15 +186,73 @@ img{
 /*About-section*/
 .two-column {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around; 
+    gap:2rem;
     max-width: 100%; 
     padding: 1rem; 
+    border-left: 1px solid #d2d2d2;
+    border-right: 1px solid #d2d2d2;
 }
-.skills ul, .tools ul{ 
+.skills{
+    display:flex;
+    flex-direction:column;
+    flex:1;
+    max-width:400px;
+}
+.skills ul { 
     list-style: none;
     padding:0;
     margin: 0;
+}
+/*Time-line*/
+.timeline {
+    flex: 2;
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    z-index:1;
+}
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: #256358;
+}
+
+.event {
+    display: flex;
+    position: relative;
+    margin: 20px 0;
+}
+
+.dot {
+    width: 24px; 
+    height: 24px;
+    background-color: #256358; 
+    border-radius: 50%; 
+    position: absolute;
+    left: -10px;
+    top: 0;
+}
+
+.event-details {
+    padding: 15px; 
+    border-radius: 8px; 
+    border: 1px solid #d2d2d2;
+    margin-left: 25px;
+    width: calc(100% - 25px);
+}
+
+.event-details h3 {
+    margin: 0; 
+    color: #256358;
+}
+
+.event-details p {
+    margin: 5px 0 0; 
 }
 /*Projects-section*/
 .project-overview{
@@ -272,7 +331,7 @@ input[type="text"], input[type="email"] {
     border-radius: 8px;
     font-size: 16px;
 }
-.contact-submit{}
+
 /*Media queries*/
 @media (min-width:800px){
     .header{
@@ -288,6 +347,9 @@ input[type="text"], input[type="email"] {
         display:flex;
         flex-direction:row;
         justify-content: center;
+    }
+    .two-column{
+        flex-direction: row;
     }
     .project-overview{
         flex-direction:row;
@@ -312,8 +374,8 @@ input[type="text"], input[type="email"] {
         flex-direction: row-reverse;
     }
     .contact-form{
-        align-items: center; /* Centrera horisontellt */
-        justify-content: center; /* Centrera vertikalt */
+        align-items: center;
+        justify-content: center;
     }
     .contact-content{
         display:flex;
