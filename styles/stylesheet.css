@@ -298,8 +298,9 @@ img{
     border: 1px solid #f2f2f2;
     border-radius:8px;
     margin: 1rem auto;
-    width:90%;
+    width:95%;
     max-width:320px;
+    min-height: 350px;
     box-shadow: 0px 0px 1px rgba(56, 56, 57, 0.01),
     0px 1px 6px rgba(56, 56, 57, 0.02),
     1px 1px 13px rgba(56, 56, 57, 0.02),
@@ -396,6 +397,7 @@ input[type="text"], input[type="email"] {
         flex-wrap:wrap;
         justify-content:center;
     }
+   
     .project-introduction{
         max-width:800px;
         text-align:left;
