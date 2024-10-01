@@ -112,6 +112,9 @@ justify-content:center;
     border-bottom: 1px solid #fefefe;
     transition: 0.3s
 }
+.nav-link:active{
+    border-bottom: 1px solid #fefefe;
+}
 .footer{
     display: flex;
     flex-direction: column;
@@ -341,7 +344,8 @@ img{
     display:flex;
     flex-direction:column;
     align-content: center;
-    background-color:#f2f2f2;
+    background: rgba(242, 242, 242);
+    background: radial-gradient(circle, rgba(242, 242, 242, 0.9), rgba(210, 210, 210,1));
 }
 .contact-content{
     display: flex;
