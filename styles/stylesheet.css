@@ -337,8 +337,11 @@ img{
     padding: 1rem; 
     margin: 1rem;
 }
-.textimg-column img{
-    margin: 1rem;
+.textimg-column img {
+    width: 100%; /* Allow image to fill its container */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 300px; /* Optional: set a max height for larger screens */
+    margin: 1rem 0; /* Add some vertical spacing */
 }
 .contact-form{
     display:flex;
@@ -388,11 +391,6 @@ input[type="text"], input[type="email"] {
     .footer{
         flex-direction: row;
     }
-    .hero-content{
-        display:flex;
-        flex-direction:row;
-        justify-content: center;
-    }
     .two-column{
         flex-direction: row;
     }
@@ -406,15 +404,9 @@ input[type="text"], input[type="email"] {
         max-width:800px;
         text-align:left;
     }
-    .textimg-column {
-        flex-direction: row;
-        justify-content: space-between; 
-        align-items:flex-start;
-        padding:0;
-    }
 
     .textimg-column img {
-        width: 180px;
+        width: 320px;
         height: auto; 
     }
 
@@ -437,5 +429,18 @@ input[type="text"], input[type="email"] {
     }
     .contact-promotext h2{
         margin-top:0;
+    }
+}
+@media (min-width:1200px){
+    .hero-content{
+        display:flex;
+        flex-direction:row;
+        justify-content: center;
+    }
+    .textimg-column {
+        flex-direction: row;
+        justify-content: space-between; 
+        align-items:flex-start;
+        padding:0;
     }
 }
