@@ -3,9 +3,11 @@
 }
 html {
     scroll-behavior: smooth;
+    color-scheme: light dark;
   }
   body {
     font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size:1rem;
     background-color:#fefefe;
     color: #2b2b2b;
@@ -23,6 +25,18 @@ html {
     font-weight:400;
     color:#606060;
 
+}
+table{
+    border: 1px solid #d2d2d2;
+    border-radius:8px;
+    width: 100%;
+}
+th, td{
+    padding: 1rem;
+    text-align: left;
+}
+th {
+    border-bottom: 1px solid #d2d2d2;
 }
 .title{
     font-size: 3rem;
@@ -69,6 +83,9 @@ h3{
     color: #fefefe;
     text-decoration: none;
 }
+.header p, .footer p{
+    color:#fefefe;
+}
 .logo{
 display:flex;
 align-items: center;
@@ -104,6 +121,13 @@ justify-content:center;
     padding: 1rem;
     bottom: 0;
 }
+.privacypolicy-termsofuse {
+    font-size:12px;
+}
+.privacypolicy-termsofuse:hover{
+    text-decoration: underline;
+    color:#fefefe;
+}
 .quick-links ul{
     display:flex;
     flex-direction: row;
@@ -129,6 +153,11 @@ justify-content:center;
     color: #fefefe;
     background-color: #256358;
 }
+.button-small:focus {
+    color: #fefefe;
+    background-color: #256358;
+    border:1px solid #1a1b1b;
+}
 /*Herobanner*/
 .hero {
     display: flex;                  
@@ -136,7 +165,7 @@ justify-content:center;
     justify-content: center;       
     align-items: center;            
     height: 83vh;                    /* Höjd på hero-sektionen */
-    background-color: #fefefe;       
+    background-color: #fefefe;   
     color: #1a1b1b;                    
     text-align: center; 
     border-bottom:1px solid #f2f2f2;     
@@ -165,7 +194,7 @@ justify-content:center;
 }
 img{
     width: 100%;
-    height: 220px;
+    height: 320px;
     max-height: 300px;
     object-fit: cover;
     border-radius: 8px;
@@ -184,6 +213,7 @@ img{
     padding:2rem;
 }
 /*About-section*/
+
 .two-column {
     display: flex;
     flex-direction: column;
@@ -191,19 +221,17 @@ img{
     gap:2rem;
     max-width: 100%; 
     padding: 1rem; 
-    border-left: 1px solid #d2d2d2;
-    border-right: 1px solid #d2d2d2;
 }
 .skills{
     display:flex;
     flex-direction:column;
     flex:1;
     max-width:400px;
+    padding:1rem;
+    margin-top:1.2rem;
 }
-.skills ul { 
-    list-style: none;
-    padding:0;
-    margin: 0;
+.skills h3{
+    color:#256358;
 }
 /*Time-line*/
 .timeline {
@@ -333,6 +361,18 @@ input[type="text"], input[type="email"] {
 }
 
 /*Media queries*/
+
+/* Mörklägesstilar */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1a1b1b; /* Mörk bakgrund */
+        color: #fefefe; /* Ljus text */
+    }
+
+    h1 {
+        color: #ff5722; /* Orange rubrik i mörkt läge */
+    }
+}
 @media (min-width:800px){
     .header{
         display:flex;
@@ -356,9 +396,15 @@ input[type="text"], input[type="email"] {
         flex-wrap:wrap;
         justify-content:center;
     }
+    .project-introduction{
+        max-width:800px;
+        text-align:left;
+    }
     .textimg-column {
         flex-direction: row;
         justify-content: space-between; 
+        align-items:flex-start;
+        padding:0;
     }
 
     .textimg-column img {
@@ -367,11 +413,7 @@ input[type="text"], input[type="email"] {
     }
 
     .textimg-text {
-        max-width: 80%;
         flex: 1; 
-    }
-    .textimg-column:nth-child(even) {
-        flex-direction: row-reverse;
     }
     .contact-form{
         align-items: center;
@@ -381,10 +423,13 @@ input[type="text"], input[type="email"] {
         display:flex;
         flex-direction:row;
         justify-content:space-around;
-        align-items: flex-end; 
+        align-items: flex-start; 
     }
     .contact-promotext{
         width:50%;
-        margin:2rem;
+        height:100;
+    }
+    .contact-promotext h2{
+        margin-top:0;
     }
 }
