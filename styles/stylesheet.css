@@ -402,7 +402,7 @@ input[type="text"], input[type="email"] {
         flex-wrap:wrap;
         justify-content:center;
     }
-   
+
     .project-introduction{
         max-width:800px;
         text-align:left;
